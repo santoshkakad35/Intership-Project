@@ -19,6 +19,9 @@ function Clients() {
                     <img src={Img3} alt="Client Logo" />
                 </div>
                 <div className="client-item">
+                    <img src={Img3} alt="Client Logo" />
+                </div>
+                <div className="client-item">
                     <img src={Img1} alt="Client Logo" />
                 </div>
             </div>

@@ -50,6 +50,7 @@ const Contact = () => (
 function App() {
   return (
     <Router>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -57,6 +58,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
       </Routes>
+      
     </Router>
   );
 }

@@ -1,6 +1,6 @@
 /* Service.css */
 .service-container {
-    padding: 40px 20px;
+    padding: 30px 20px;
     background-color: #f8f9fa;
     text-align: center;
     /* background-image: url('../assets/blob.svg');
@@ -11,17 +11,18 @@
 }
 
 .service-container h3 {
-    font-size: 28px;
     margin-bottom: 30px;
     color: #333;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+    font-size: 28px;
 }
 
 .service-block-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
     gap: 20px;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -49,4 +50,22 @@
     color: #555;
     font-size: 15px;
     line-height: 1.5;
+}
+
+/* Mobile view */
+
+@media (max-width: 992px) {
+    .service-block-container {
+        grid-template-columns: repeat(2, 1fr); /* Tablet: 2 columns */
+    }
+}
+
+@media (max-width: 600px) {
+    .service-block-container {
+        grid-template-columns: 1fr; /* Mobile: 1 column */
+    }
+
+    .service-block {
+        text-align: start;
+    }
 }

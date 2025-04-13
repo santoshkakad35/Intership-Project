@@ -1,59 +1,152 @@
+/* Common Styles */
 nav {
-    /* background-color: rgba(45, 45, 84, 0.8); */
-    padding: 15px 30px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: black;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: relative;
+    background-color: white;
+    z-index: 1001;
+    /* width: 100%; */
+}
+
+#logo img {
+    width: 70px;
+    height: auto;
+    padding: 0 10px;
+}
+
+/* Nav Wrapper */
+#nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    gap: 20px;
     margin: 0;
     padding: 0;
 }
 
-nav ul li a{
-    cursor: pointer;
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
     text-decoration: none;
-    transition: color 0.3s ease;
-    color:black;
-    font-size: 1.3rem;  
+    color: black;
+    font-size: 1.3rem;
     font-weight: 500;
-    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    font-family:Cochin;
+    font-family: Cochin;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffd700;
+    color: #4e54c8;
 }
 
-nav .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+/* Auth buttons - desktop */
+.Authentication_btn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 20px;
 }
-
-
 
 .Authentication_btn .btn {
     padding: 10px 25px;
     font-size: 1rem;
     font-weight: bold;
     border: none;
-    border-radius: 8px;
-    background-color: #4e54c8;
-    color: white;
+    /* border-radius: 8px; */
+    /* background-color: #4e54c8; */
+    color: #4e54c8;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    border: 1px solid #4e54c8;;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin-left: 5px;
+}
+
+.Authentication_btn #btn_register:hover {
+    background-color: #4e54c8;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    right: 40px;
+    top: 23px;
+}
+
+/* Mobile Styles */
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px; /* Reduced padding for mobile */
+    }
+    
+    .menu-icon {
+        display: block;
+    }
+    
+    #nav-links {
+        flex-direction: column;
+        align-items: start;
+        position: absolute;
+        top: 95px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 5px 0; /* Reduced padding */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        display: none;
+    }
+    
+    #nav-links li {
+        margin: 0;
+        width: 100%; /* Full width for hover effect */
+    }
+    
+    #nav-links li a {
+        font-size: 1.5rem;
+        padding: 5px 25px; /* Add some padding for better click area */
+        width: 100%;
+        display: block;
+        cursor: pointer;
+    }
+    
+    #nav-links li a:hover {
+        background-color: #B6DBFF;
+        width: 100%;
+    }
+    
+    #nav-links.show {
+        display: flex;
+    }
+    
+    .Authentication_btn {
+        flex-direction: column;
+        margin-top: 20px;
+        width: 100%;
+        align-items: start;
+        gap: 0px;
+    }
+    
+    .Authentication_btn .btn {
+        width:80%;
+        margin-bottom: 10px;
+    }
+    
 }
 
 
-.Authentication_btn .btn:hover {
-    background-color: #565dff;
-    transform: scale(1.05);
-}
