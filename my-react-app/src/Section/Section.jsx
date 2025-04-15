@@ -50,8 +50,8 @@ function Section() {
                     <div className="about-thesis-box-align">
                         <img src={PaperLogo1} alt="Thesis Logo" id="thesis-logo" />
                         <div className="about-thesis-text">
-                            <h2>Reserch Paper</h2>
-                            <p>Create your reserch paper</p>
+                            <h2>Research Paper</h2>
+                            <p>Create your research paper</p>
                             {/* <div className="about-btn">
                                 <button className="btn">Generate</button>
                             </div> */}
